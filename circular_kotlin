@@ -1,0 +1,18 @@
+fun getShiftedString(s: String, leftShifts: Int, rightShifts: Int): String {
+    // Write your code here
+    var result = "" ; 
+    val l = s.length ;
+    var d =(leftShifts-rightShifts)%l ;
+    if (d==0){
+        result = s ;
+    }
+    else{
+        if(d>0){
+            result = s.substring(d) + s.substring(0,d) ;
+        }
+        else{
+            result = s.substring(l + d) + s.substring(0,l + d) ;
+        }
+    }
+return result ;
+}
